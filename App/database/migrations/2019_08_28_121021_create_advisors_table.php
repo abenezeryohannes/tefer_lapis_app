@@ -16,14 +16,14 @@ class CreateAdvisorsTable extends Migration
         Schema::create('advisors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('department_id');
-            $table->string('sex');
+            $table->unsignedBigInteger('organization_id');
+            $table->string('sex')->nullable();
             $table->timestamps();
         });
 
         Schema::table('advisors', function (Blueprint $table){
             $table->foreign('user_id')->references('id')->on('users')->onCascade('delete');
-            $table->foreign('department_id')->references('id')->on('users')->onCascade('delete');
+            $table->foreign('organization_id')->references('id')->on('users')->onCascade('delete');
         });
     }
 

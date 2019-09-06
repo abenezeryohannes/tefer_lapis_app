@@ -18,7 +18,10 @@ class CreateStudentsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('university_id');
             $table->unsignedBigInteger('department_id');
-            $table->string('sex');
+            $table->string('student_identification')->nullable();
+            $table->string('sex')->nullable();
+            $table->float('grade')->nullable();
+            $table->integer('year')->nullable();
             $table->timestamps();
         });
 

@@ -60,7 +60,13 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-    ];
+        'uni' => \App\Http\Middleware\CheckUniversity::class,
+        'admin' => \App\Http\Middleware\CheckAdmin::class,
+        'dep' => \App\Http\Middleware\CheckDepartment::class,
+        'stu' => \App\Http\Middleware\CheckStudent::class,
+        'org' => \App\Http\Middleware\CheckOrganization::class,
+        'adv' => \App\Http\Middleware\CheckAdvisor::class,
+       ];
 
     /**
      * The priority-sorted list of middleware.

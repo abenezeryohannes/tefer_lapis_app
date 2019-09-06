@@ -18,6 +18,7 @@ class CreateReportsTable extends Migration
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('advisor_id');
             $table->string('text');
+            $table->string('attachment');
             $table->unsignedInteger('score');
             $table->timestamps();
         });
