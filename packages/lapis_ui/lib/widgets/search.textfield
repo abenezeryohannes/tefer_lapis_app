@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+
+class SearchTextField extends StatefulWidget {
+  const SearchTextField({ Key? key, required this.hint, required this.theme,
+          required this.text, required this.onChange }) : super(key: key);
+  final String hint;
+  final String text;
+  final ThemeData theme;
+  final Function(String) onChange;
+  @override
+  State<SearchTextField> createState() => _SearchTextFieldState();
+}
+
+class _SearchTextFieldState extends State<SearchTextField> {
+  final TextEditingController textController = TextEditingController(text: "");
+
+  @override
+  void initState() { super.initState();
+    textController.text = widget.text;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if(widget.text == null||widget.text.length == 0){
+      textController.text = widget.text;
+    }
+    return  TextField(
+        controller: textController,
+        // style: widget.theme.textTheme.button,
+        onChanged: (text) { widget.onChange(text); },
+        decoration: InputDecoration(
+          hintText: widget.hint,
+          border: InputBorder.none,
+          focusColor: widget.theme.colorScheme.secondary,
+          constraints: const BoxConstraints(maxHeight: 42),
+          filled: false, fillColor: widget.theme.backgroundColor,
+          hintStyle: TextStyle(fontWeight: FontWeight.w900, fontSize: 16,
+              color: widget.theme.dividerColor),
+          contentPadding: const EdgeInsets.symmetric( horizontal: 10, vertical: 10),
+        )
+    );
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "palette1",
+    "BackgroundColors": [
+        "0xFFFAFAFA",
+        "0xFFF5F5F5"
+    ],
+    "AccentColor": "0xFFFDD835",
+    "PrimaryColor": "0xFFFDD835",
+    "CardColor": "0xFFFFFFF",
+    "PrimaryColorDark": "0xFFFDD835",
+    "AccentColorLight": "0xFFFFEB3B",
+    "AccentColorDark": "0xFFFFEB3B",
+    "ActiveColor": "0xFFFFEB3B",
+    "InActiveColor": "0xFF33322F",
+    "UnSelectedColor": "0xFF9E9E9E", 
+    "SelectedColor": "0xFFFDD835",
+    "TextColor": "0xFF212121",
+    "ButtonTextColor": "0xFF333333",
+    "OnBackground": "0xFF212121",
+    "OnSecondary": "0xFF333333"
+}

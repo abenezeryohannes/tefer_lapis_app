@@ -1,0 +1,8 @@
+
+
+class ChangeSubscriber{
+
+ void onDataChange(){
+
+ } 
+}
